@@ -33,7 +33,7 @@ public class Main {
         User user = new User("Mike","Smith",new Role(2,"Manager"));
         System.out.println(user.getFirstName());
         System.out.println(user.getLastName());
-        System.out.println(user.getRole().getId());
+        System.out.println(user.getRole().getId());//user.getRole() => return object donuyor. birde sonunda getId()ekleyerek o object ten bir deger donduruyorum
         System.out.println(user.getRole().getDescription());
 
 
