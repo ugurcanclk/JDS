@@ -34,6 +34,7 @@ public class Project extends BaseEntity{
     private String projectDetail;
 
 
+
     public Project(long id, LocalDateTime insertDateTime, long insertUserId,
                    LocalDateTime lastUpdateDateTime, long lastUpdateUserId,
                    String projectCode, String projectName, User assignedManager,
@@ -48,5 +49,10 @@ public class Project extends BaseEntity{
         this.endDate = endDate;
         this.projectStatus = projectStatus;
         this.projectDetail = projectDetail;
+
+
     }
+
+
+
 }

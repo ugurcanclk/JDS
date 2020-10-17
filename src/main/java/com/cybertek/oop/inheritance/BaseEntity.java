@@ -18,4 +18,6 @@ public class BaseEntity {
     private LocalDateTime lastUpdateDateTime;
     private long lastUpdateUserId;
 
+
+
 }

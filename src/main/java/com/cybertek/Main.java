@@ -14,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         //*********CORE**********//
 
         Methods methods=new Methods();
@@ -43,11 +44,11 @@ public class Main {
         //*********OOP-Inheritance**********//
 
         Project project= new Project(1, LocalDateTime.now(),
-                2,LocalDateTime.now(),3,"prj",
-                "abc",
-                new User("Hans","Smith",new Role(1,"desc")),
-                LocalDate.now(),LocalDate.now(),"inprogress",
-                "in progress");
+                1,LocalDateTime.now().minusHours(5),1,"PRJ001",
+                "Human Resource CRM",
+                new User("Mike","Smith",new Role(1,"Manager")),
+                LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS",
+                "HCRM Detail Information");
 
         System.out.println(project.getAssignedManager().getFirstName());
         System.out.println(project.getAssignedManager().getRole().getDescription());
