@@ -5,6 +5,10 @@ import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
 import com.cybertek.oop.encapsulation.Role;
 import com.cybertek.oop.encapsulation.User;
+import com.cybertek.oop.inheritance.Project;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Main {
 
@@ -33,10 +37,20 @@ public class Main {
         User user = new User("Mike","Smith",new Role(2,"Manager"));
         System.out.println(user.getFirstName());
         System.out.println(user.getLastName());
-        System.out.println(user.getRole().getId());
+        System.out.println(user.getRole().getId());//user.getRole() => return object donuyor. birde sonunda getId()ekleyerek o object ten bir deger donduruyorum
         System.out.println(user.getRole().getDescription());
 
+        //*********OOP-Inheritance**********//
 
+        Project project= new Project(1, LocalDateTime.now(),
+                2,LocalDateTime.now(),3,"prj",
+                "abc",
+                new User("Hans","Smith",new Role(1,"desc")),
+                LocalDate.now(),LocalDate.now(),"inprogress",
+                "in progress");
+
+        System.out.println(project.getAssignedManager().getFirstName());
+        System.out.println(project.getAssignedManager().getRole().getDescription());
 
 
     }

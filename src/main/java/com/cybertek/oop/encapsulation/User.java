@@ -14,7 +14,7 @@ public class User {
 
     private  String firstName;
     private String lastName;
-    private Role role;
+    private Role role;     //getter setter olustururken bu variable lari buyuk harfle kuruyo yani getRole() gibi
 
 
 }
