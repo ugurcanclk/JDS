@@ -41,7 +41,7 @@ public class Project extends BaseEntity{
                    LocalDate startDate, LocalDate endDate, String projectStatus,
                    String projectDetail) {
         //super(); => boylede cagirabilirim super class in constr. ama defaultu cagirmis oldum
-        super(id, insertDateTime, insertUserId, lastUpdateDateTime, lastUpdateUserId);
+        //super(id, insertDateTime, insertUserId, lastUpdateDateTime, lastUpdateUserId);
         this.projectCode = projectCode;
         this.projectName = projectName;
         this.assignedManager = assignedManager;
