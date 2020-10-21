@@ -53,7 +53,7 @@ public class Main {
                 1,LocalDateTime.now().minusHours(5),1,"PRJ001",
                 "Human Resource CRM",
                 new User("Mike","Smith",new Role(1,"Manager"),Gender.FEMALE),
-                LocalDate.now(),LocalDate.now().plusMonths(6),"IN_PROGRESS",
+                LocalDate.now(),LocalDate.now().plusMonths(6),Status.IN_PROGRESS,
                 "HCRM Detail Information");
 
         System.out.println(project.getAssignedManager().getFirstName());
@@ -84,6 +84,7 @@ public class Main {
 
         System.out.println(Gender.MALE);
         System.out.println(Status.IN_PROGRESS);
+        System.out.println(Status.IN_PROGRESS.getValue()); //bunu Status enum classina getter lambok koyarak aldim
 
 
 

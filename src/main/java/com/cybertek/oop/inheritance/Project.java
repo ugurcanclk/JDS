@@ -1,5 +1,6 @@
 package com.cybertek.oop.inheritance;
 
+import com.cybertek.enums.Status;
 import com.cybertek.oop.encapsulation.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,7 +31,7 @@ public class Project extends BaseEntity{
     private User assignedManager;
     private LocalDate startDate;
     private LocalDate endDate;
-    private String projectStatus;
+    private Status projectStatus;
     private String projectDetail;
 
 
@@ -38,7 +39,7 @@ public class Project extends BaseEntity{
     public Project(long id, LocalDateTime insertDateTime, long insertUserId,
                    LocalDateTime lastUpdateDateTime, long lastUpdateUserId,
                    String projectCode, String projectName, User assignedManager,
-                   LocalDate startDate, LocalDate endDate, String projectStatus,
+                   LocalDate startDate, LocalDate endDate, Status projectStatus,
                    String projectDetail) {
         //super(); => boylede cagirabilirim super class in constr. ama defaultu cagirmis oldum
         //super(id, insertDateTime, insertUserId, lastUpdateDateTime, lastUpdateUserId);
