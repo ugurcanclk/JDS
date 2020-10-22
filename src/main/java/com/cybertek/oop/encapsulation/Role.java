@@ -1,17 +1,15 @@
 package com.cybertek.oop.encapsulation;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 
 public class Role {
-    private long id;
+    private Integer id;
     private String description;
 
 
