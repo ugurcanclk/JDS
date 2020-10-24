@@ -3,9 +3,15 @@ package com.cybertek;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
+import com.cybertek.enums.Gender;
+import com.cybertek.enums.Status;
+import com.cybertek.oop.abstraction.implementation.UserServiceImplementation;
+import com.cybertek.oop.abstraction.service.UserService;
 import com.cybertek.oop.encapsulation.Role;
 import com.cybertek.oop.encapsulation.User;
+import com.cybertek.oop.inheritance.BaseEntity;
 import com.cybertek.oop.inheritance.Project;
+import com.cybertek.oop.polymorphism.Employee;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -13,6 +19,7 @@ import java.time.LocalDateTime;
 public class Main {
 
     public static void main(String[] args) {
+
 
         //*********CORE**********//
 
@@ -34,7 +41,7 @@ public class Main {
 
         //*********OOP-Encapsulation**********//
 
-        User user = new User("Mike","Smith",new Role(2,"Manager"));
+        User user = new User("Mike","Smith",new Role(2,"Manager"), Gender.FEMALE);
         System.out.println(user.getFirstName());
         System.out.println(user.getLastName());
         System.out.println(user.getRole().getId());//user.getRole() => return object donuyor. birde sonunda getId()ekleyerek o object ten bir deger donduruyorum
@@ -43,14 +50,44 @@ public class Main {
         //*********OOP-Inheritance**********//
 
         Project project= new Project(1, LocalDateTime.now(),
-                2,LocalDateTime.now(),3,"prj",
-                "abc",
-                new User("Hans","Smith",new Role(1,"desc")),
-                LocalDate.now(),LocalDate.now(),"inprogress",
-                "in progress");
+                1,LocalDateTime.now().minusHours(5),1,"PRJ001",
+                "Human Resource CRM",
+                new User("Mike","Smith",new Role(1,"Manager"),Gender.FEMALE),
+                LocalDate.now(),LocalDate.now().plusMonths(6),Status.IN_PROGRESS,
+                "HCRM Detail Information");
 
         System.out.println(project.getAssignedManager().getFirstName());
         System.out.println(project.getAssignedManager().getRole().getDescription());
+
+        //*********OOP-Interface**********//
+
+        UserService userService= new UserService();
+        System.out.println(userService.userByFirstName("Mike").getLastName());
+
+        //*********OOP-Polymorphism**********//
+
+        Employee employee =new Employee();
+
+        BaseEntity employee2= new Employee();
+
+        UserServiceImplementation userServiceImplementation= new UserService();
+        //interface
+
+        employee.getEmployeeHours();
+
+       // employee2.getEmployeeHours(); => bu comply error verir cunku reference type decide accebility
+
+        ((Employee) employee2).getEmployeeHours(); //downcasting yaptim
+
+
+        //*********ENUM**********//
+
+        System.out.println(Gender.MALE);
+        System.out.println(Status.IN_PROGRESS);
+        System.out.println(Status.IN_PROGRESS.getValue()); //bunu Status enum classina getter lambok koyarak aldim
+
+
+
 
 
     }
