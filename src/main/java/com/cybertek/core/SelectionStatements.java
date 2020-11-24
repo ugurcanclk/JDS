@@ -29,5 +29,21 @@ public class SelectionStatements {
         }
     }
 
+    public static void demoSwitchCaseStatement(String str){
+
+         switch (str){
+             case "Ozzy":
+                 System.out.println("pass");
+                 break;
+             case "Mike":
+                 System.out.println("fail");
+                 break;
+             default:
+                 System.out.println("not valid");
+         }
+
+
+    }
+
 
 }

@@ -7,7 +7,7 @@ public class Methods {
     }
 
     public void methodA(String str){
-        System.out.println("methodB(String str) is called");
+        System.out.println("methodA(String str) is called");
     }
 
     public String methodB(){

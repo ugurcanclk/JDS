@@ -1,5 +1,7 @@
 package com.cybertek;
 
+import com.cybertek.collections.ArrayLists;
+import com.cybertek.collections.ArrayLists2;
 import com.cybertek.core.Loops;
 import com.cybertek.core.Methods;
 import com.cybertek.core.SelectionStatements;
@@ -28,7 +30,8 @@ public class Main {
         methods.methodA("Apple");
         System.out.println(methods.methodB());
         System.out.println(methods.methodB(6));
-        Methods.methodC();  //static method obje ile cagrilmaz
+        Methods.methodC();  //static method obje ile cagrilmasi tavsiye edilmez. class adiyla cagir
+
 
         //*********LOOPS**********//
 
@@ -86,8 +89,9 @@ public class Main {
         System.out.println(Status.IN_PROGRESS);
         System.out.println(Status.IN_PROGRESS.getValue()); //bunu Status enum classina getter lambok koyarak aldim
 
-
-
+        ArrayLists2.createList();
+        ArrayLists2.createUserList();
+        System.out.println(ArrayLists2.createRoleList());
 
 
     }

@@ -15,12 +15,16 @@ public enum Status {
     //2.static block
     //constructor
 
-    private final String value;
+    String value;
 
 
     Status(String value){
+
         this.value=value;
     }
+
+
+
 
 
 }
